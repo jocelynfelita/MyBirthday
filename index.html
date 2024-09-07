@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jocelyn Felita's Birthday Invitation</title>
+  <style>
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cursive', sans-serif;
+      background-color: #fbfbfb;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .invitation-container {
+      text-align: center;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      border: 15px solid rgb(255, 255, 255);
+      max-width: 450px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1.5s ease-out forwards;
+    }
+
+    h1, h2 {
+      font-family: 'Dancing Script', cursive;
+      color: #4da6ff;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      animation-delay: 0.5s;
+    }
+
+    h2 {
+      font-size: 2rem;
+      animation-delay: 1s;
+    }
+
+    p {
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      font-size: 1rem;
+      margin: 10px 0;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+      animation-delay: 1.5s;
+    }
+
+    /* Button for RSVP (Optional) */
+    .rsvp-btn {
+      display: inline-block;
+      padding: 10px 25px;
+      margin-top: 20px;
+      border-radius: 30px;
+      background-color: #4da6ff;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+      animation-delay: 2s;
+    }
+
+    .rsvp-btn:hover {
+      background-color: #397ab1;
+      transform: scale(1.05);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Floating Blue Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      background-color: #4da6ff;
+      width: 60px;
+      height: 80px;
+      border-radius: 50%;
+      animation: floatBalloon 6s ease-in-out infinite;
+    }
+
+    .balloon:nth-child(1) {
+      left: 10%;
+      animation-duration: 7s;
+    }
+
+    .balloon:nth-child(2) {
+      left: 30%;
+      animation-duration: 9s;
+    }
+
+    .balloon:nth-child(3) {
+      left: 50%;
+      animation-duration: 8s;
+    }
+
+    .balloon:nth-child(4) {
+      left: 70%;
+      animation-duration: 7s;
+    }
+
+    .balloon:nth-child(5) {
+      left: 90%;
+      animation-duration: 8s;
+    }
+
+    @keyframes floatBalloon {
+      0% {
+        bottom: -100px;
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        bottom: 100%;
+        transform: translateX(-20px);
+      }
+    }
+
+    /* Google Maps Container */
+    .map-container {
+      margin-top: 20px;
+      animation: fadeIn 1.5s ease-out forwards;
+      animation-delay: 2s;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 480px) {
+      .invitation-container {
+        padding: 20px;
+        max-width: 90%;
+      }
+
+      h1, h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Balloons -->
+  <!-- <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div> -->
+
+  <div class="invitation-container">
+    <h1>You are warmly invited</h1>
+    <p>MFF Mepet Dket PTS TP DTG DLU BE,<br>
+    yg Pnting HBD DLU Saranghae.<br>
+    yg DBS DPP Saranghae 2.</p>
+
+    <h2>Jocelyn Felita's Birthday</h2>
+
+    <p class="date">September 14 at 6:00 PM</p>
+
+    <p class="location">Mister Mayor Cafe & Resto<br>
+    Jl. Dr. M. Isa No.2, Kuto Batu, Kec. Ilir Tim. II, Kota Palembang, Sumatera Selatan 30114</p>
+
+    <p class="dress-code">Dresscode: Blue</p>
+
+    <a href="https://wa.me/6285609333077"
+    " class="rsvp-btn">RSVP Now</a>
+
+    <!-- Google Maps Section -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63748.25443112047!2d104.72113251562753!3d-2.957319860911739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b751d3ed3b823%3A0xb92800b8d8c48880!2sMister%20Mayor%20Cafe%20%26%20Resto!5e0!3m2!1sen!2sid!4v1694087930319!5m2!1sen!2sid" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+</body>
+</html>
